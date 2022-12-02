@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+content="width=device-width,
+initial-scale=1">
+    <title>Contact us</title>
+<body bgcolor="white"> </body>
+    </head>
+<br>
+ <center> <h2>You can contact us through online or offline :- </h2> </center>
+<center> <h4>Branch Office :</h4> <address> <b>5th floor 'Sunrise' cantonment road Jalandhar </b> </address> </center>
+<center> <h3>Follow us on:</h3>
+<a href="http://www.facebook.com"> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/1200px-Facebook_f_logo_%282021%29.svg.png" style="width:100px;height:100px;"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.twitter.com"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/1200px-Twitter-logo.svg.png" style="width:100px;height:100px;"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.whatsapp.com"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" style="width:100px;height:100px;"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.instagram.com"> <img src="https://th.bing.com/th/id/OIP.yt_8U-wJTrdh9LAa178SywHaHZ?pid=ImgDet&w=1455&h=1454&rs=1" style="width: 100px;height: 100px;"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.linkedin.com"> <img src="https://i1.wp.com/madtownseo.com/wp-content/uploads/2014/07/linkedin-logo.png?resize=800%2C675&ssl=1" style="width: 100px;height: 100px;"> </a> </center>
+
+
+
+<body>
+if (navigator.geolocation) {
+  <navigator.geolocation.getcurrentposition(function(position){
+                 console.log(position);
+       });    
+}
+<div id="navbar"><span>Developers Community - Geolocation API</span></div>
+<div id="wrapper">
+    <button id="location-button">Get user location</button>
+    <div id="output"></div>
+</div>
+
+<script>
+    $('#location-button').click(function(){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position){
+                console.log(position);
+                $.get( "http://maps.googleapis.com/maps/api/geocode/json?latlng="+
+                ="&sensor=false",function(data) {
+                    console.log(data);
+                })
+                var img = new Image();
+                img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" +
+                position.coords.latitude + "," + position.coords.longitude +
+                "&zoom=13&size=800x400&sensor=false";
+                $('#output').html(img);
+            });
+        }
+    });
+</script>
+<br> <br> <br> <br>
+<center> <div style="color: green;"> <h1> “A mother’s tears cannot save her child. But your blood can.”</h1></div> </center>
+</body>
+</html>
